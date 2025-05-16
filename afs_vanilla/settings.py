@@ -143,6 +143,7 @@ INSTALLED_APPS = (
     "django_celery_results",
     # "silk",
     "afs_vanilla",  # Ensure the project is listed before any other arches applications
+    "arches_for_science"
 )
 
 # Placing this last ensures any templates provided by Arches Applications
