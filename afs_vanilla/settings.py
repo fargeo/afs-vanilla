@@ -167,7 +167,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "arches.app.utils.middleware.SetAnonymousUser",
     # "silk.middleware.SilkyMiddleware",
-    "arches_her.utils.auto_login.AutoLogin",
+    "afs_vanilla.utils.auto_login.AutoLogin",
 ]
 
 ANONYMOUS_USER = "anonymous"
