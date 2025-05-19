@@ -167,7 +167,20 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "arches.app.utils.middleware.SetAnonymousUser",
     # "silk.middleware.SilkyMiddleware",
+    "arches_her.utils.auto_login.AutoLogin",
 ]
+
+ANONYMOUS_USER = "anonymous"
+
+AUTHENTICATION_BACKENDS = (
+    "arches.app.utils.email_auth_backend.EmailAuthenticationBackend",
+    "oauth2_provider.backends.OAuth2Backend",
+    "django.contrib.auth.backends.ModelBackend",  # this is default
+    "arches.app.utils.permission_backend.PermissionBackend",
+    "guardian.backends.ObjectPermissionBackend",
+    "arches.app.utils.external_oauth_backend.ExternalOauthAuthenticationBackend",
+    "afs_vanilla.utils.demo_auth_backend.DemoAuthBackend",
+)
 
 MIDDLEWARE.insert(  # this must resolve to first MIDDLEWARE entry
     0, "django_hosts.middleware.HostsRequestMiddleware"
