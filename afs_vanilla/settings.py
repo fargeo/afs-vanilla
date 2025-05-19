@@ -170,7 +170,7 @@ MIDDLEWARE = [
     "afs_vanilla.utils.auto_login.AutoLogin",
 ]
 
-ANONYMOUS_USER = "anonymous"
+ANONYMOUS_USER = "demo-user"
 
 AUTHENTICATION_BACKENDS = (
     "arches.app.utils.email_auth_backend.EmailAuthenticationBackend",
